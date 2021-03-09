@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>08.exercise-02-double-jump</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+  html {
+      font-size: 100%;
+      box-sizing: border-box;
+      font-family: 'Open Sans', 'sans-serif';
+      background-color: #fff;
+      color: #444;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      padding: 2rem;
+      max-width: 1000px;
+  }
+  
+  footer {
+  }
+  
+  h1, p {
+      margin: 0 0 1em 0;
+  }
+  
+  h1, h2, h3 {
+      font-family: "Montserrat", Calibri, sans-serif;
+  }
+  
+  th {
+      font-family: "Montserrat", Calibri, sans-serif;
+  }
+  
+  .clearfix {
+      clear:both;
+  }
+  
+  .logo {
+      max-width: 4cm;
+      max-height: 1.5cm;
+  }
+  
+  .logo > img {
+      max-width: inherit;
+      max-height: inherit;
+  }
+  
+  /* LAYOUT */
+  #company {
+      float: left;
+      width: 6cm;
+  }
+  
+  #client {
+      float: right;
+      width: 5cm;
+  }
+  
+  td {
+      vertical-align: top;
+  }
+  
+  td, th {
+      padding: 10px;
+  }
+  
+  header {
+      display: block;
+      margin-bottom: 4rem;
+  }
+  
+  footer {
+      font-size: 0.8em;
+  }
+  
+  @media print {
+    * {
+      background: transparent !important;
+      color: black !important;
+      filter: none !important;
+      -ms-filter: none !important;
+    }
+  
+    body {
+      font-size: 12pt;
+      max-width: 100%;
+    }
+  
+    a, a:visited {
+      text-decoration: underline;
+    }
+  
+    hr {
+      height: 1px;
+      border: 0;
+      border-bottom: 1px solid black;
+    }
+  
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+  
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+      content: "";
+    }
+  
+    pre, blockquote {
+      border: 1px solid #999;
+      padding-right: 1em;
+      page-break-inside: avoid;
+    }
+  
+    tr, img {
+      page-break-inside: avoid;
+    }
+  
+    img {
+      max-width: 100% !important;
+    }
+  
+    @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+  }
+  
+    @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+  }
+  
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2, h3 {
+      page-break-after: avoid;
+    }
+  }
+  </style>
+</head>
+<body>
+<h1 id="double-jump">Double jump</h1>
+<p>How about allowing the player to jump 2 times instead of 1? That’s your task in this assignment.</p>
+<p>Your character should:</p>
+<ul>
+<li>Be able to jump a second time in the air state</li>
+<li>All jumps should be at the same speed</li>
+</ul>
+<h2 id="extra-challenge">Extra challenge</h2>
+<p>If you only modify the jump you will notice that the player is able to go up a little too fast.</p>
+<p>The challenge is to split the maximum speed going up and the maximum speed going down. In other words, the maximum jump speed and the maximum fall speed.</p>
+</body>
+</html>

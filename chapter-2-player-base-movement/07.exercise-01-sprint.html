@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>07.exercise-01-sprint</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+  html {
+      font-size: 100%;
+      box-sizing: border-box;
+      font-family: 'Open Sans', 'sans-serif';
+      background-color: #fff;
+      color: #444;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      padding: 2rem;
+      max-width: 1000px;
+  }
+  
+  footer {
+  }
+  
+  h1, p {
+      margin: 0 0 1em 0;
+  }
+  
+  h1, h2, h3 {
+      font-family: "Montserrat", Calibri, sans-serif;
+  }
+  
+  th {
+      font-family: "Montserrat", Calibri, sans-serif;
+  }
+  
+  .clearfix {
+      clear:both;
+  }
+  
+  .logo {
+      max-width: 4cm;
+      max-height: 1.5cm;
+  }
+  
+  .logo > img {
+      max-width: inherit;
+      max-height: inherit;
+  }
+  
+  /* LAYOUT */
+  #company {
+      float: left;
+      width: 6cm;
+  }
+  
+  #client {
+      float: right;
+      width: 5cm;
+  }
+  
+  td {
+      vertical-align: top;
+  }
+  
+  td, th {
+      padding: 10px;
+  }
+  
+  header {
+      display: block;
+      margin-bottom: 4rem;
+  }
+  
+  footer {
+      font-size: 0.8em;
+  }
+  
+  @media print {
+    * {
+      background: transparent !important;
+      color: black !important;
+      filter: none !important;
+      -ms-filter: none !important;
+    }
+  
+    body {
+      font-size: 12pt;
+      max-width: 100%;
+    }
+  
+    a, a:visited {
+      text-decoration: underline;
+    }
+  
+    hr {
+      height: 1px;
+      border: 0;
+      border-bottom: 1px solid black;
+    }
+  
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+  
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+      content: "";
+    }
+  
+    pre, blockquote {
+      border: 1px solid #999;
+      padding-right: 1em;
+      page-break-inside: avoid;
+    }
+  
+    tr, img {
+      page-break-inside: avoid;
+    }
+  
+    img {
+      max-width: 100% !important;
+    }
+  
+    @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+  }
+  
+    @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+  }
+  
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2, h3 {
+      page-break-after: avoid;
+    }
+  }
+  </style>
+</head>
+<body>
+<h1 id="exercise-sprint">Exercise: Sprint</h1>
+<p>Our character can walk or run at a constant speed, but let’s say we decide the player should be able to go faster by pressing a key. This way, they can choose to move slowly to have more precision or fast to… go faster!</p>
+<p>Your task is to add the option to sprint by keeping a key down. Add this to the game, starting from the chapter 2 Godot project.</p>
+<p>Your character should:</p>
+<ul>
+<li><strong>Run at a higher speed</strong> when Shift is down and move more slowly when the Shift key is released</li>
+</ul>
+<p><strong>Which script should this be on</strong>? Think about where you should place that code, and write down why that is.</p>
+<h2 id="extra-challenge">Extra challenge</h2>
+<p>Right now, the player instantly accelerates to the maximum speed, and it stops instantly. Add some acceleration and deceleration on the ground, as in Mario or Sonic games.</p>
+<p>Acceleration is already supported, but you will have to do a little extra work to add deceleration.</p>
+<h2 id="what-this-is-all-about-and-hint">What this is all about (and hint)</h2>
+<p>The purpose of this exercise is to help you think about where to place your code in a Finite State Machine, because it’s not always obvious. You could place the sprint code on the parent move state as it defines the default movement.</p>
+<p>That is until you realize that the sprint is something you can only do in the Run state in this exercise, so the code should be on the Run state. But if you could sprint in both the Run and the Air states, depending on the game’s design and the the feel that you want, this code could well be on their parent Move state.</p>
+</body>
+</html>
